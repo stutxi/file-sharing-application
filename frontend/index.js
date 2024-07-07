@@ -15,9 +15,9 @@ const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const APP_BASE_URL = "https://file-sharing-application-sleg.onrender.com";
-const uploadURL = `${APP_BASE_URL}/api/files`;
-const emailURL = `${APP_BASE_URL}/api/files/send`;
+const baseURL = "https://file-sharing-application-72km.onrender.com";
+const uploadURL = `${baseURL}/api/files`;
+const emailURL = `${baseURL}/api/files/send`;
 
 const maxAllowedSize = 100 * 1024 * 1024; //100mb
 
