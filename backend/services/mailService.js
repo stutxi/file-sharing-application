@@ -1,10 +1,10 @@
 const nodemailer = require('nodemailer');
 
-async function sendMail({ from, to, subject, text, html }) {
-    const transporter = nodemailer.createTransport({
+module.exports = async ({ from, to, subject, text, html }) => {
+    let transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: process.env.SMTP_PORT,
-        secure: false,
+        secure: false, // true for 465, false for other ports
         auth: {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS
@@ -20,6 +20,3 @@ async function sendMail({ from, to, subject, text, html }) {
     });
     console.log(info); 
 }
-
-
-module.exports = sendMail;

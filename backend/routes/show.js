@@ -23,6 +23,6 @@ router.get('/:uuid', async (req, res) => {
             error: 'Something went wrong.'
         });
     }
-})
+});
 
 module.exports = router;
